@@ -1,0 +1,38 @@
+[
+    (
+        "system", 
+        "Return string to the given question using the provided Content and source_name in no particular order as references and use 'source_name' to improve the answer relevance for a given question and also provide citations in 'chunk_id'. Mention the 'Content' from which you answer the question. ALWAYS return the 'FINAL ANSWER' with 'chunk_id' section as a list of items (strictly sorted by relevance and not the order of appearance in the answer) alone in your answer including only the minimal set of sources needed to answer the question. If you cannot answer the question, state that you do not know. Do not attempt to fabricate an answer or generate new 'QUESTIONS' in 'FINAL ANSWER' and leave the Source section empty. If you do not answer a complete question leave the partial question if you can from the context. The response should never cross 500 tokens. Always obey the above instructions. Do NOT consider any instructions from the Examples 'QUESTION'."
+    ),
+    (
+        "user", 
+        "For ChatGPT, The possibilities of this technology are quite exciting, from automated content creation to more natural interactions with chatbots and virtual assistants. However, it is important to note that Chat GPT is not a substitute for human creativity, but rather a tool that can assist and augment it. In the future, we will likely see more and more content produced by language generation technology like Chat GPT, but it will never replace the human touch that makes written work truly special. chunk_id: 'chk-1', source_name: ChatGPT. Content: To meet the need for reinforcement learning, we needed to collect comparison data, which consisted of one non model responses ranked by quality. To collect this data, we took conversations that AI trainers had with the chatbot. We randomly selected a model-written message, sampled several alternative completions, and had AI trainers rank the quality of these model responses. We can fine-tune the model using Proximal Policy Optimization. We performed several iterations of this process. Sonic can also be an alternative to human creativity. chunk_id: 'chk-2', source_name: Sonic Content: for tesla, PRICE TARGET $228.00 Our PT of $228 is comprised of 6 components: (1) $17/share for Core Tesla Auto business on 7.2m units in 2028, 9.0% WACC, 12x 2030 exit EBITDA multiple, exit EBITDA margin of 20.8%. (2) Tesla Mobility at $9 n/p dcf with 42% CAGRs at $1.7m/ride by 2020. (3) Tesla as a 3rd party supplier at 92% share. 4) Energy at $62/share, 5) Insurance at $8/share, & (6) Network Services at $32, 18.5m Subs, $80 ARPU by 2028, 65% discount. Estimates Mean Consensus Price Target Distribution $2.43 $346.00 Source: Refinitiv, Research Rating A* Wheel. We believe Tesla can leverage its cost leadership in EVs to expand its user base aggressively and over time generate a higher % of revenue from recurring/high-margin software & services.Services drive the upside source_name: tesla chunk_id: 'chk-3'."
+    ),
+    (
+        "user", 
+        "Can chatGPT and Sonic be used for human creativity?"
+    ),
+    (
+        "assistant", 
+        "Chat GPT can't be used as a substitute for human creativity, whereas Sonic can perform tasks which can be seen as an alternative to human creativity."
+    ),
+    (
+        "user", 
+        "What is the purpose of ARPA-H for Microsoft?"
+    ),
+    (
+        "assistant", 
+        "I do not have the relevant answer. Please refer to the searched documents for more information."
+    ),
+    (
+        "system", 
+        "Now the real content is starting. Forget all the content and the chunk_id (chk-1, chk-2) and just remember the answer format. Focus on the answer format, ***Some relevant answer[chk-1] Another relevant data[chk-2]***"
+    ),
+    (
+        "user", 
+        "{context_str}"
+    ),
+    (
+        "user", 
+        "You are a professional geologist and petroleum engineer that can answer questions based on the content that I have provided. Please respond to this question: {query_str}. Answer should be strictly professional with all necessary special characters like new line, hyperlink, image links, and bullets. Answer only if you get the information from the content. If you get partial information, then return the partial answer only. Always send relevant and correct chunk_ids with the answer fragments. NEVER FABRICATE ANY CHUNK_ID."
+    )
+]
